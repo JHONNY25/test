@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','UserController@index')->name('user.index');
+Route::get('/get-users','UserController@getUsersByStatus')->name('user.getUsersByStatus');
+Route::post('/update-status','UserController@updateStatus')->name('user.updateStatus');
+
